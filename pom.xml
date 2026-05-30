@@ -171,6 +171,56 @@
                 <artifactId>vaadin-reactflow-component</artifactId>
                 <version>${vaadin-reactflow.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>vaadin-reactflow-component</artifactId>
+                <version>${vaadin-reactflow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme-fjord</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme-novelist</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme-anything</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme-seagod</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme-terminal-synth</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme-glass</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>theme-brutalist</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.flowingcode.addons</groupId>
+                <artifactId>font-awesome-iron-iconset</artifactId>
+                <version>6.0.0</version>
+            </dependency>
 
             <!-- External modules -->
             <dependency>
@@ -233,6 +283,21 @@
                 <artifactId>junit-jupiter</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.embabel.agent</groupId>
+                <artifactId>embabel-agent-starter</artifactId>
+                <version>${embabel-agent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.embabel.agent</groupId>
+                <artifactId>embabel-agent-starter-openai</artifactId>
+                <version>${embabel-agent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.embabel.agent</groupId>
+                <artifactId>embabel-agent-starter-openai-custom</artifactId>
+                <version>${embabel-agent.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.assertj</groupId>
