@@ -70,6 +70,7 @@
         <vaadin-reactflow.version>1.0.0-SNAPSHOT</vaadin-reactflow.version>
         <vaadin-stateflow.version>1.0.0-SNAPSHOT</vaadin-stateflow.version>
         <vaadin-themes.version>1.0.0-SNAPSHOT</vaadin-themes.version>
+        <vaadin-graph.version>1.0.0-SNAPSHOT</vaadin-graph.version>
     </properties>
 
     <repositories>
@@ -175,6 +176,16 @@
                 <groupId>org.antoined</groupId>
                 <artifactId>vaadin-reactflow-component</artifactId>
                 <version>${vaadin-reactflow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>vaadin-graph-component</artifactId>
+                <version>${vaadin-graph.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antoined</groupId>
+                <artifactId>vaadin-graph-karibu</artifactId>
+                <version>${vaadin-graph.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.antoined</groupId>
