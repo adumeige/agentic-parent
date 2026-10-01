@@ -12,7 +12,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>org.antoined</groupId>
+    <groupId>io.github.adumeige.agentic-parent</groupId>
     <artifactId>agentic-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -20,18 +20,36 @@
     <name>Agentic Parent</name>
     <description>Parent pom for agentic developments using Kotlin, Vaadin and Embabel.</description>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/adumeige/agentic-parent</url>
-        </repository>
-    </distributionManagement>
+    <url>https://github.com/adumeige/agentic-parent</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>adumeige</id>
+            <name>Antoine Dumeige</name>
+            <url>https://github.com/adumeige</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/adumeige/agentic-parent.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/adumeige/agentic-parent.git</developerConnection>
+        <url>https://github.com/adumeige/agentic-parent</url>
+    </scm>
 
     <properties>
         <!-- Languages and project files -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>21</java.version>
+        <central.autoPublish>false</central.autoPublish>
+        <central.waitUntil>validated</central.waitUntil>
         <kotlin.version>2.3.0</kotlin.version>
         <kotlin.compiler.version>2.3</kotlin.compiler.version>
 
@@ -63,14 +81,14 @@
         <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
 
         <!-- Internal dependencies -->
-        <agent-tools.version>1.0.0-SNAPSHOT</agent-tools.version>
-        <grapher.version>1.0.0-SNAPSHOT</grapher.version>
-        <vaadin-nvl.version>1.0.0-SNAPSHOT</vaadin-nvl.version>
-        <vaadin-pixel-charts.version>1.0.0-SNAPSHOT</vaadin-pixel-charts.version>
-        <vaadin-reactflow.version>1.0.0-SNAPSHOT</vaadin-reactflow.version>
-        <vaadin-stateflow.version>1.0.0-SNAPSHOT</vaadin-stateflow.version>
-        <vaadin-themes.version>1.0.0-SNAPSHOT</vaadin-themes.version>
-        <vaadin-graph.version>1.0.0-SNAPSHOT</vaadin-graph.version>
+        <agent-tools.version>1.0.0</agent-tools.version>
+        <grapher.version>1.0.0</grapher.version>
+        <vaadin-nvl.version>1.0.0</vaadin-nvl.version>
+        <vaadin-pixel-charts.version>1.0.0</vaadin-pixel-charts.version>
+        <vaadin-reactflow.version>1.0.0</vaadin-reactflow.version>
+        <vaadin-stateflow.version>1.0.0</vaadin-stateflow.version>
+        <vaadin-themes.version>1.0.0</vaadin-themes.version>
+        <vaadin-graph.version>1.0.0</vaadin-graph.version>
     </properties>
 
     <repositories>
@@ -148,83 +166,83 @@
 
             <!-- Internal sibling artifacts. -->
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.agent-tools</groupId>
                 <artifactId>agent-tools</artifactId>
                 <version>${agent-tools.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-stateflow</groupId>
                 <artifactId>vaadin-stateflow</artifactId>
                 <version>${vaadin-stateflow.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-nvl</groupId>
                 <artifactId>vaadin-nvl</artifactId>
                 <version>${vaadin-nvl.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-pixel-charts</groupId>
                 <artifactId>vaadin-pixel-charts</artifactId>
                 <version>${vaadin-pixel-charts.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-reactflow</groupId>
                 <artifactId>vaadin-reactflow-component</artifactId>
                 <version>${vaadin-reactflow.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
-                <artifactId>vaadin-reactflow-component</artifactId>
-                <version>${vaadin-reactflow.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-graph</groupId>
                 <artifactId>vaadin-graph-component</artifactId>
                 <version>${vaadin-graph.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-graph</groupId>
                 <artifactId>vaadin-graph-karibu</artifactId>
                 <version>${vaadin-graph.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme-fjord</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme-novelist</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme-anything</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme-seagod</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme-terminal-synth</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme-glass</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.antoined</groupId>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
                 <artifactId>theme-brutalist</artifactId>
+                <version>${vaadin-themes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.adumeige.vaadin-themes</groupId>
+                <artifactId>theme-analog</artifactId>
                 <version>${vaadin-themes.version}</version>
             </dependency>
             <dependency>
@@ -423,6 +441,48 @@
                         </plugin>
                     </plugins>
                 </pluginManagement>
+            </build>
+        </profile>
+        <profile>
+            <id>central-release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.2.8</version>
+                        <inherited>false</inherited>
+                        <configuration>
+                            <signer>bc</signer>
+                            <bestPractices>true</bestPractices>
+                            <keyEnvName>MAVEN_GPG_KEY</keyEnvName>
+                            <passphraseEnvName>MAVEN_GPG_PASSPHRASE</passphraseEnvName>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.11.0</version>
+                        <extensions>true</extensions>
+                        <inherited>false</inherited>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>${central.autoPublish}</autoPublish>
+                            <waitUntil>${central.waitUntil}</waitUntil>
+                            <waitMaxTime>3600</waitMaxTime>
+                            <deploymentName>${project.groupId}:${project.version}</deploymentName>
+                        </configuration>
+                    </plugin>
+                </plugins>
             </build>
         </profile>
     </profiles>
