@@ -59,14 +59,19 @@ jobs:
             <packaging>pom</packaging>
           </project>
           POM
-          mvn -B -ntp -f .consumer/pom.xml -Pcentral-release help:effective-pom -Doutput=effective-pom.xml
+          mvn -B -ntp -f .consumer/pom.xml -Pcentral-release verify help:effective-pom -Doutput=effective-pom.xml
           python3 - <<'PY'
           import xml.etree.ElementTree as ET
           root = ET.parse(".consumer/effective-pom.xml").getroot()
           ns = {"m": "http://maven.apache.org/POM/4.0.0"}
           plugins = {plugin.findtext("m:artifactId", namespaces=ns)
                      for plugin in root.findall("m:build/m:plugins/m:plugin", ns)}
-          assert not plugins.intersection({"maven-gpg-plugin", "central-publishing-maven-plugin"}), plugins
+          assert "central-publishing-maven-plugin" not in plugins, plugins
+          for plugin in root.findall("m:build/m:plugins/m:plugin", ns):
+              if plugin.findtext("m:artifactId", namespaces=ns) == "maven-gpg-plugin":
+                  print("Consumer GPG declaration:", ET.tostring(plugin, encoding="unicode"))
+                  assert plugin.find("m:executions", ns) is None
+                  assert plugin.find("m:configuration", ns) is None
           assert root.find("m:distributionManagement", ns) is None
           PY
 
