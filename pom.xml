@@ -14,7 +14,7 @@
 
     <groupId>io.github.adumeige.agentic-parent</groupId>
     <artifactId>agentic-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <name>Agentic Parent</name>
